@@ -5,10 +5,8 @@ const escapeHtml = require("escape-html");
 const app = express();
 app.disable("x-powered-by");
 
-// Parse seguro para form-urlencoded
 app.use(express.urlencoded({ extended: false }));
 
-// Arquivos estáticos
 app.use(express.static(path.join(__dirname, "../views")));
 
 app.post("/submit", (req, res) => {
