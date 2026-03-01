@@ -49,8 +49,12 @@ jobs:
 
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@v2
+        with:
+             args: >
+               -Dsonar.qualitygate.wait=true
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      
   docker-build:
     runs-on: ubuntu-latest
     needs: sonar   # Só executa se sonar passar
