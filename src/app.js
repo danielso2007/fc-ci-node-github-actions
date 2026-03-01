@@ -1,19 +1,22 @@
-function printMessage(message) {
-  if (!message) {
-    throw new Error("Message is required");
-  }
-  return `Message received: ${message}`;
-}
+const express = require("express");
+const path = require("path");
 
-if (require.main === module) {
-  const input = process.argv[2];
-  try {
-    const result = printMessage(input);
-    console.log(result);
-  } catch (err) {
-    console.error(err.message);
-    process.exit(1);
-  }
-}
+const app = express();
 
-module.exports = { printMessage };
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "../views")));
+
+app.post("/submit", (req, res) => {
+  const message = req.body.message || "";
+  res.send(`
+    <html>
+      <body>
+        <h1>Resultado</h1>
+        <p>${message}</p>
+        <a href="/">Voltar</a>
+      </body>
+    </html>
+  `);
+});
+
+module.exports = app;

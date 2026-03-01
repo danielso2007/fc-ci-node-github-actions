@@ -1,14 +1,21 @@
-const { printMessage } = require("../src/app");
+const request = require("supertest");
+const app = require("../src/app");
 
-describe("printMessage", () => {
+describe("Web App", () => {
 
-  test("should return formatted message", () => {
-    const result = printMessage("Hello");
-    expect(result).toBe("Message received: Hello");
+  test("GET / should return index page", async () => {
+    const res = await request(app).get("/");
+    expect(res.statusCode).toBe(200);
+    expect(res.text).toContain("Hello World App");
   });
 
-  test("should throw error if message is empty", () => {
-    expect(() => printMessage()).toThrow("Message is required");
+  test("POST /submit should return submitted message", async () => {
+    const res = await request(app)
+      .post("/submit")
+      .send("message=Teste");
+
+    expect(res.statusCode).toBe(200);
+    expect(res.text).toContain("Teste");
   });
 
 });
