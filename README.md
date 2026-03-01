@@ -1,3 +1,19 @@
+[![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=danielso2007_fc-ci-node-github-actions)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=danielso2007_fc-ci-node-github-actions&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=danielso2007_fc-ci-node-github-actions&metric=coverage)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=danielso2007_fc-ci-node-github-actions&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=danielso2007_fc-ci-node-github-actions&metric=bugs)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=danielso2007_fc-ci-node-github-actions&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=danielso2007_fc-ci-node-github-actions)
+
+**Main:**
+
+[![Node CI](https://github.com/danielso2007/fc-ci-node-github-actions/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/danielso2007/fc-ci-node-github-actions/actions/workflows/ci.yml)
+
+**Develop:**
+
+[![Node CI](https://github.com/danielso2007/fc-ci-node-github-actions/actions/workflows/ci.yml/badge.svg?branch=develop)](https://github.com/danielso2007/fc-ci-node-github-actions/actions/workflows/ci.yml)
+
 # Node Web App
 
 Aplicação Node.js com:
