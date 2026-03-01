@@ -3,6 +3,7 @@ const path = require("path");
 const escapeHtml = require("escape-html");
 
 const app = express();
+app.disable("x-powered-by");
 
 // Parse seguro para form-urlencoded
 app.use(express.urlencoded({ extended: false }));
