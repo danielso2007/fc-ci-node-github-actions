@@ -17,12 +17,10 @@ app.post("/submit", (req, res) => {
       ? req.body.message
       : "";
 
-  // Limite defensivo opcional
   if (rawMessage.length > 500) {
     return res.status(400).type("text/plain").send("Message too long");
   }
 
-  // Escapa caracteres perigosos
   const safeMessage = escapeHtml(rawMessage);
 
   res
